@@ -5,7 +5,9 @@ export default function handler(req:any,res:any){
     "*"
   );
 
-  const available = !!process.env.GEMINI_API_KEY;
+  const available = Boolean(
+    process.env.GEMINI_API_KEY
+  );
 
   res.status(200).json({
 
